@@ -1,0 +1,45 @@
+#container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #cd6c42;
+  }
+  
+  #image-gallery {
+    display: flex;
+    border: 2px solid #e18e6b;
+    margin-top: 10%;
+    height: 100%; 
+  }
+  
+  .book-item {
+    flex: 1;
+    border-right: 2px solid #cd6c42;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; 
+  }
+  
+  .book-item:last-child {
+    border-right: none; 
+  }
+  
+  h3 {
+    text-align: center;
+    color: rgba(255, 100, 100, 0.8);
+  }
+  
+  figure {
+    text-align: center;
+  }
+  
+  figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(121, 27, 31, 0.8);
+  }
