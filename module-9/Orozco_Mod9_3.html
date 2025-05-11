@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" 
+        content="Kimberly Orozco">
+    <meta name="description" 
+        content="Assignment 2.2 - Building a Web Page Exercise">
+    <meta name="keywords" 
+        content="HTML, CSS, Bellevue University">
+    
+    
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Orozco_Mod2_2.css">
+
+    <script>
+        var word1 = "friendly";
+        var word2 = "video games";
+        var word3 = "supportive";
+        var word4 = "storytelling";
+    </script>
+</head>
+
+<body>
+
+<div id="container">
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+    <h2>Chapter 1: HTML</h2>
+
+    <p class="intro">
+        Hello! My name is Kimberly, and I am currently studying at Bellevue University. 
+        I have always been interested in technology and web development, which is why I am excited about this course.
+        Learning HTML and CSS will help me build the foundation I need to create websites.
+    </p>
+
+    <p>
+        I grew up in Tecumseh NE, and it has always been a special place for me. 
+        Everyone in this town is very <span id="word1">_________</span> to each other, and I have many great memories from my childhood. 
+        <span class="sentence">One of my favorite things to do is play <span id="word2">_________</span> and spend time with my family</span>
+    </p>
+
+    <p>
+        When I am not studying, I enjoy several hobbies, including reading fantasy novels and playing games. 
+        My family is very <span id="word3">_________</span> and has always pushed me to follow my dreams. 
+        I hope to one day create a project that combines my love for <span id="word4">_________</span> and technology.
+    </p>
+
+    <p>
+        <button onclick="document.getElementById('word1').innerHTML = word1">Reveal Word 1</button>
+        <button onclick="document.getElementById('word2').innerHTML = word2">Reveal Word 2</button>
+        <button onclick="document.getElementById('word3').innerHTML = word3">Reveal Word 3</button>
+        <button onclick="document.getElementById('word4').innerHTML = word4">Reveal Word 4</button>
+    </p>
+
+    <hr/>
+
+    <address>
+        <p><a href="https://www.bellevue.edu/" target="_blank">Bellevue University</a></p>
+        <p>1000 Galvin Road South</p>
+        <p>Bellevue, NE 68005</p>
+    </address>
+</div>
+
+</body>
+</html>
