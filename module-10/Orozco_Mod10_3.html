@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    img {
+      width: 300px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Assignment 10.3: JavaScript - Part 2</h1>
+  
+  <p>Click an image to change it!</p>
+<img src="images/Angry Sweat Sticker by milkmochabear.gif" 
+     id="img1" 
+     onclick="changeImage('img1', 'images/Happy Love You Sticker by milkmochabear.gif')" 
+     alt="Image 1">
+
+<img src="images/Happy Love You Sticker by milkmochabear.gif" 
+     id="img2" 
+     onclick="changeImage('img2', 'images/Angry Sweat Sticker by milkmochabear.gif')" 
+     alt="Image 2">
+  <script>
+    function changeImage(id, newSrc) {
+      document.getElementById(id).src = newSrc;
+    }
+  </script>
+</body>
+</html>
