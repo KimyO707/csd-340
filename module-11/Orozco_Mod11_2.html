@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    body {
+      margin: 20px;
+    }
+    .button-group {
+      margin-top: 10px;
+    }
+    button {
+      margin-right: 10px;
+    }
+    #output {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+  <p>Enter a task below and use the buttons to manage your To Do list!</p>
+
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  
+  <div class="button-group">
+        <!-- Buttons that do stuff -->
+    <button onclick="addTask()">Add</button>
+    <button onclick="deleteLastTask()">Delete Last Entry</button>
+    <button onclick="displayTasks()">Display</button>
+  </div>
+
+  <!-- Where the list should show -->
+  <div id="output"></div>
+
+  <script>
+    // Where the tasks should go
+    const tasks = [];
+
+    function addTask() {
+      const input = document.getElementById("taskInput");
+      const task = input.value.trim();
+      if (task) {
+        tasks.push(task); //adds task
+        alert(`Added: "${task}" at position ${tasks.length}`);
+        input.value = ""; //clears the box when ur done
+      } else {
+        alert("Please enter a task before adding.");
+      }
+    }
+
+    // Delets the last task that the user put in
+    function deleteLastTask() {
+      if (tasks.length > 0) {
+        const removed = tasks.pop();
+        alert(`Deleted: "${removed}"`);
+      } else {
+        alert("The list is already empty.");
+      }
+    }
+    //Shows the whole list
+    function displayTasks() {
+      const outputDiv = document.getElementById("output");
+      if (tasks.length === 0) {
+        outputDiv.innerHTML = "<p>The task list is empty.</p>";
+        return;
+      }
+
+      let html = "<ol>";
+      for (let i = 0; i < tasks.length; i++) { 
+        html += `<li>${tasks[i]}</li>`; //adds every task
+      }
+      html += "</ol>"; //ends the list
+      outputDiv.innerHTML = html;
+    }
+  </script>
+
+</body>
+</html>
