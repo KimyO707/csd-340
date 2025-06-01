@@ -20,7 +20,7 @@
                     <button onclick="displayBooksDescending()">Bottom to Top</button>
                 </div>
 
-                <div id="bookList"></div>
+            <ul id="bookList"></ul>
             </div>
             
             <div class="right">
@@ -55,22 +55,20 @@
         ];
 
         function displayBooksAscending() {
-            let listHTML = "<ol>";
-            for (let i = 0; i < books.length; i++) {
-                listHTML += "<li>" + books[i] + "</li>";
-            }
-            listHTML += "</ol>";
-            document.getElementById("bookList").innerHTML = listHTML;
-        }
+    let listHTML = "";
+    for (let i = 0; i < books.length; i++) {
+        listHTML += `<li>${i + 1}. ${books[i]}</li>`;
+    }
+    document.getElementById("bookList").innerHTML = listHTML;
+}
 
         function displayBooksDescending() {
-            let listHTML = "<ol>";
-            for (let i = books.length - 1; i >= 0; i--) {
-                listHTML += "<li>" + books[i] + "</li>";
-            }
-            listHTML += "</ol>";
-            document.getElementById("bookList").innerHTML = listHTML;
-        }
+    let listHTML = "";
+    for (let i = books.length - 1; i >= 0; i--) {
+        listHTML += `<li>${books.length - i}. ${books[i]}</li>`;
+    }
+    document.getElementById("bookList").innerHTML = listHTML;
+}
 
         window.onload = displayBooksAscending;
     </script>
