@@ -41,39 +41,41 @@
     </div>
 
     <script>
-        const books = [
-            "Circe",
-            "The Will Of The Many",
-            "Fruits Basket",
-            "Dragon Ball",
-            "The Outsiders",
-            "The Odyssey",
-            "Of Mice and Men",
-            "Me before You",
-            "Game at Carousel",
-            "The Fragrant Flower Blooms with Dignity"
-        ];
+    const books = [
+        "Circe",
+        "The Will Of The Many",
+        "Fruits Basket",
+        "Dragon Ball",
+        "The Outsiders",
+        "The Odyssey",
+        "Of Mice and Men",
+        "Me before You",
+        "Game at Carousel",
+        "The Fragrant Flower Blooms with Dignity"
+    ];
 
-        function displayBooksAscending() {
-            let listHTML = "<ol>";
-            for (let i = 0; i < books.length; i++) {
-                listHTML += "<li>" + books[i] + "</li>";
-            }
-            listHTML += "</ol>";
-            document.getElementById("bookList").innerHTML = listHTML;
+    function displayBooksAscending() {
+        let listHTML = "<ul>";
+        for (let i = 0; i < books.length; i++) {
+            listHTML += `<li>${i + 1}. ${books[i]}</li>`;
         }
+        listHTML += "</ul>";
+        document.getElementById("bookList").innerHTML = listHTML;
+    }
 
-        function displayBooksDescending() {
-            let listHTML = "<ol>";
-            for (let i = books.length - 1; i >= 0; i--) {
-                listHTML += "<li>" + books[i] + "</li>";
-            }
-            listHTML += "</ol>";
-            document.getElementById("bookList").innerHTML = listHTML;
+    function displayBooksDescending() {
+        let listHTML = "<ul>";
+        let num = books.length;
+        for (let i = books.length - 1; i >= 0; i--) {
+            listHTML += `<li>${num}. ${books[i]}</li>`;
+            num--;
         }
+        listHTML += "</ul>";
+        document.getElementById("bookList").innerHTML = listHTML;
+    }
 
-        // Optional: Show ascending list by default
-        window.onload = displayBooksAscending;
-    </script>
+    window.onload = displayBooksAscending;
+</script>
+
 </body>
 </html>

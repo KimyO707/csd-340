@@ -42,3 +42,12 @@ ul {
 .bottom a:hover {
     text-decoration: underline;
 }
+
+#bookList ul {
+ list-style: none;         
+    list-style-position: inside;
+    border: 1px solid red;      
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0;
+}
