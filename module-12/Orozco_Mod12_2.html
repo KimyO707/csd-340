@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Orozco_Mod3_3.css">
+
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+        
+        <div class="content">
+            <div class="left">
+                <h3>Top 10 Favorite Books</h3>
+
+                <div class="buttons">
+                    <button onclick="displayBooksAscending()">Top to Bottom</button>
+                    <button onclick="displayBooksDescending()">Bottom to Top</button>
+                </div>
+
+                <div id="bookList"></div>
+            </div>
+            
+            <div class="right">
+                <h3>5 Things I’ve Learned Since the Course Started</h3>
+                <ul>
+                    <li>I have learned how to code with HTML.</li>
+                    <li>I know how to navigate around Github.</li>
+                    <li>I know how to import fonts into my websites.</li>
+                    <li>I know how to push my work into Github.</li>
+                    <li>I learned to always be cautious with your work. Always double check!</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bottom">
+            <a href="../index.html">Back to Landing Page</a>
+        </div>
+    </div>
+
+    <script>
+        const books = [
+            "Circe",
+            "The Will Of The Many",
+            "Fruits Basket",
+            "Dragon Ball",
+            "The Outsiders",
+            "The Odyssey",
+            "Of Mice and Men",
+            "Me before You",
+            "Game at Carousel",
+            "The Fragrant Flower Blooms with Dignity"
+        ];
+
+        function displayBooksAscending() {
+            let listHTML = "<ol>";
+            for (let i = 0; i < books.length; i++) {
+                listHTML += "<li>" + books[i] + "</li>";
+            }
+            listHTML += "</ol>";
+            document.getElementById("bookList").innerHTML = listHTML;
+        }
+
+        function displayBooksDescending() {
+            let listHTML = "<ol>";
+            for (let i = books.length - 1; i >= 0; i--) {
+                listHTML += "<li>" + books[i] + "</li>";
+            }
+            listHTML += "</ol>";
+            document.getElementById("bookList").innerHTML = listHTML;
+        }
+
+        window.onload = displayBooksAscending;
+    </script>
+</body>
+</html>
