@@ -41,36 +41,36 @@
     </div>
 
     <script>
-        const books = [
-            "Circe",
-            "The Will Of The Many",
-            "Fruits Basket",
-            "Dragon Ball",
-            "The Outsiders",
-            "The Odyssey",
-            "Of Mice and Men",
-            "Me before You",
-            "Game at Carousel",
-            "The Fragrant Flower Blooms with Dignity"
-        ];
+    const books = [
+        "Circe",
+        "The Will Of The Many",
+        "Fruits Basket",
+        "Dragon Ball",
+        "The Outsiders",
+        "The Odyssey",
+        "Of Mice and Men",
+        "Me before You",
+        "Game at Carousel",
+        "The Fragrant Flower Blooms with Dignity"
+    ];
 
-        function displayBooksAscending() {
-    let listHTML = "";
-    for (let i = 0; i < books.length; i++) {
-        listHTML += `<li>${i + 1}. ${books[i]}</li>`;
+    function displayBooksAscending() {
+        let listHTML = "";
+        for (let i = 0; i < books.length; i++) {
+            listHTML += `<li>${i + 1}. ${books[i]}</li>`;
+        }
+        document.getElementById("bookList").innerHTML = listHTML;
     }
-    document.getElementById("bookList").innerHTML = listHTML;
-}
 
-        function displayBooksDescending() {
-    let listHTML = "";
-    for (let i = books.length - 1; i >= 0; i--) {
-        listHTML += `<li>${books.length - i}. ${books[i]}</li>`;
+    function displayBooksDescending() {
+        let listHTML = "";
+        for (let i = books.length - 1; i >= 0; i--) {
+            listHTML += `<li>${books.length - i}. ${books[i]}</li>`;
+        }
+        document.getElementById("bookList").innerHTML = listHTML;
     }
-    document.getElementById("bookList").innerHTML = listHTML;
-}
-
-        window.onload = displayBooksAscending;
-    </script>
+    
+    window.onload = displayBooksAscending;
+</script>
 </body>
 </html>
